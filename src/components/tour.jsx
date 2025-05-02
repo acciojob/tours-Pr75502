@@ -6,13 +6,17 @@ function Tour({ tour, removeTour, toggleDescription }) {
         <article>
             <img src={tour.image} alt={tour.name} />
             <h2>{tour.name}</h2>
-            <p>{tour.showMore ? tour.description : `${tour.description.substring(0, 200)}...`}</p>
+            <p
+                id={`tour-item-para-${tour.id}`}
+            >{tour.showMore ? tour.description : `${tour.description.substring(0, 200)}...`}</p>
             <button onClick={() => toggleDescription(tour.id)}>
                 
                 {tour.showMore ? "Show Less" : "Show More"}
             </button>
             <h4>{tour.price}</h4>
-            <button onClick={()=>removeTour(tour.id)} >Remove</button>
+            <button
+                id={`delete-btn-${tour.id}`}
+                onClick={() => removeTour(tour.id)} >Remove</button>
             ,
        </article>
     )

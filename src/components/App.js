@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import toursData from "../data/tourData";
 import Loading from "./Loading";
-import Tour from "./tour";
+
 import Tours from "./tours";
 
 
